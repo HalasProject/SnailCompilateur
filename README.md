@@ -11,7 +11,7 @@ Real number | Composed of at two integers separated by a point "." |  `[0-9]+\.[
 
 Command | Description | Example 
 ------- | ----------- | ---------------
-Affectation of a number (Integer/Real) to a variable | Set <<identifier>> = <<value>> %. | `Give j 55 %.`
+Affectation of a number (Integer/Real) to a variable | Set <<identifier>> = <<value>> %. | `Set j 55 %.`
 Affectation of the value of a variable to another variable | Get <<identifier>> from <<identifier>> %. | `Get i from j %.`
 Condition | If % \<\<condition\>\> % \<\<action\>\> %. | `if % i<j % Set j 55 %.`
 

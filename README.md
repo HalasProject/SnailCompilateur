@@ -17,17 +17,17 @@ Condition | If % \<\<condition\>\> % \<\<action\>\> %. | `if % i<j % Set j 55 %.
 
 Example of code : 
 
-`Snl_Start
-Snl_Int i,j,Aft_5,f_f_5 %.
-Set i 23 %.
-Snl_Real Aft34_2 %.
-If % i<j % Set Aft_5 10 %.
-Else
-Start
-Get j from i %.
-Set Af34_2 123.54 %.
-Finish
-Snl_Put "Ceci est une chaine de caractere" %.
-Snl_Put i %.
-%.. Ceci est un commentaire
-Snl_Close`
+`Snl_Start`
+`Snl_Int i,j,Aft_5,f_f_5 %.`
+`Set i 23 %.`
+`Snl_Real Aft34_2 %.`
+`If % i<j % Set Aft_5 10 %.`
+`Else`
+`Start`
+`Get j from i %.`
+`Set Af34_2 123.54 %.`
+`Finish`
+`Snl_Put "Ceci est une chaine de caractere" %.`
+`Snl_Put i %.`
+`%.. Ceci est un commentaire`
+`Snl_Close`

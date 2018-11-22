@@ -36,6 +36,9 @@
     <ClInclude Include="main.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="Token.h">
+      <Filter>Fichiers sources\Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,6 +51,9 @@
       <Filter>Fichiers sources\CPP</Filter>
     </ClCompile>
     <ClCompile Include="Semantique.cpp">
+      <Filter>Fichiers sources\CPP</Filter>
+    </ClCompile>
+    <ClCompile Include="Token.cpp">
       <Filter>Fichiers sources\CPP</Filter>
     </ClCompile>
   </ItemGroup>

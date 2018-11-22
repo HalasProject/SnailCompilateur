@@ -156,12 +156,14 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="Semantique.h" />
     <ClInclude Include="Syntaxique.h" />
+    <ClInclude Include="Token.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Lexical.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Semantique.cpp" />
     <ClCompile Include="Syntaxique.cpp" />
+    <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

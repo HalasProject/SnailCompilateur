@@ -1,6 +1,7 @@
 #include "Lexical.h"
 #include "pch.h"
 
+
 using namespace std;
 bool DoF = true;
 Lexical::Lexical()

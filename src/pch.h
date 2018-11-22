@@ -10,8 +10,12 @@
 #define PCH_H
 
 // TODO: Ajoutez les en-têtes à précompiler ici
+#include <stdio.h>
+#include <stdlib.h>
 #include <iostream>
 #include <fstream>
+#include <vector>
+#include <string>
 using namespace std;
 static char operation[] = { "!&*+-/<>=" };
 static char instruction[][10] = { "Else","Finish","from" };

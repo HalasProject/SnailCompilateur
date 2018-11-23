@@ -7,7 +7,7 @@
 
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/src/commnd.jpg)
 
-To open this project, preferably have Visual Studio, go to File> Open> Project and select the .sln file.
+#### To open this project, preferably have Visual Studio, go to File> Open> Project and select the .sln file.
 
 Type | Description | Regex 
 -----| ------------| ---------

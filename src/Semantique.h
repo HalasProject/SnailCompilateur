@@ -3,7 +3,7 @@
 #include "pch.h"
 class Semantique {
 public:
-	Semantique();
+	Semantique(FILE*);
 	void checkOperator(char);
 	char checkCommenaireEtEnd(char, FILE*& SnailFile);
 	void check_key(char *);

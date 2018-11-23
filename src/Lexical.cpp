@@ -1,11 +1,62 @@
 #include "Lexical.h"
 #include "pch.h"
 
-
-using namespace std;
 bool DoF = true;
-Lexical::Lexical()
+
+Lexical::Lexical(FILE* SnailFile)
 {
+
+	while ((caractere = getc(SnailFile)) != EOF) {
+		checkOperator(caractere);
+		checkCommenaireEtEnd(caractere, SnailFile);
+		checkprintf(caractere, SnailFile);
+
+		if ((caractere >= 48 && caractere <= 57) || (caractere >= 97 && caractere <= 122) || (caractere >= 65 && caractere <= 90) || (caractere == '_') || (caractere == '.'))
+			manyC[j++] = caractere;
+		else if ((caractere == ' ') || (caractere == '\n') || (caractere == ',') && (j != 0))
+		{
+			manyC[j] = '\0';
+			string TOK(manyC);
+			token.push_back(TOK);
+			j = 0;
+			if (strcmp("If", manyC) == 0)
+			{
+				printf("%s : Condition\n", manyC);
+			}
+			else if (strcmp("Snl_Start", manyC) == 0)
+			{
+				printf("%s : Mot reserve debut de programme \n", manyC);
+			}
+			else if (strcmp("Snl_Put", manyC) == 0)
+			{
+				printf("%s : Mot reserve debut de programme \n", manyC);
+			}
+			else if (strcmp("Snl_Close", manyC) == 0)
+			{
+				printf("%s : Mot reserve fin de programme\n", manyC);
+			}
+			else if (strcmp("Snl_Int", manyC) == 0)
+			{
+				printf("%s   : Mot reserve declaration d'un entier\n", manyC);
+			}
+			else if (strcmp("Snl_Real", manyC) == 0)
+			{
+				printf("%s : Mot reserve declaration d'un reel\n", manyC);
+			}
+			else if (strcmp("Get", manyC) == 0)
+			{
+				printf("%s : Mot reserve pour affectation d'une valeur \n", manyC);
+			}
+			else if (strcmp("Set", manyC) == 0)
+			{
+				printf("%s : Mot reserve pour affectation d'une valeur \n", manyC);
+			}
+			else {
+				check_key(manyC);
+			}
+
+		}
+	}
 }
 
 void Lexical::checkOperator(char A)

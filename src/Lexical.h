@@ -4,7 +4,7 @@
 
 class Lexical{
 public:
-Lexical();
+Lexical(FILE*);
 void checkOperator(char);
 char checkCommenaireEtEnd(char,FILE*& SnailFile);
 void check_key(char *);

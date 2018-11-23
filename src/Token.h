@@ -5,8 +5,10 @@
 
 class Token{
 public:
-Token();
+Token(FILE *);
 void ShowMe(vector<string> Token);
+char checkCommenaireEtEnd(char, FILE*& SnailFile);
+char checkprintf(char, FILE*& SnailFile);
 protected:
 private:
 

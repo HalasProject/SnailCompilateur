@@ -4,7 +4,7 @@
 //   3. Utilisez la fenêtre Sortie pour voir la sortie de la génération et d'autres messages.
 //   4. Utilisez la fenêtre Liste d'erreurs pour voir les erreurs.
 //   5. Accédez à Projet > Ajouter un nouvel élément pour créer des fichiers de code, ou à Projet > Ajouter un élément existant pour ajouter des fichiers de code existants au projet.
-//   6. Pour rouvrir ce projet plus tard, accédez à Fichier > Ouvrir > Projet et sélectionnez le fichier .sln.
+//   6. 
 
 #ifndef PCH_H
 #define PCH_H
@@ -21,4 +21,8 @@ static char operation[] = { "!&*+-/<>=" };
 static char instruction[][10] = { "Else","Finish","from" };
 static int sizeInstruction = sizeof(instruction) / sizeof(instruction[0]);
 static int i;
+static char caractere;
+static char manyC[100];
+static int j = 0;
+static vector<string> token;
 #endif //PCH_H

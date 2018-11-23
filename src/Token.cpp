@@ -9,7 +9,8 @@
 #include "pch.h"
 #include "Token.h"
 
-Token::Token(FILE * SnailFile)
+
+Token::Token(FILE * SnailFile,vector<string>& HOKI,bool ShowONOFF)
 {
 	printf("[*]------------------------------------------------------[*]\n");
 	printf("[*]-------------------T---O---K---E---N------------------[*]\n");
@@ -17,26 +18,27 @@ Token::Token(FILE * SnailFile)
 	printf("\n\n");
 
 	while ((caractere = getc(SnailFile)) != EOF) {
-		checkCommenaireEtEnd(caractere, SnailFile);
-		checkprintf(caractere, SnailFile);
+		checkCommenaireEtEnd(caractere, SnailFile, HOKI);
+		checkprintf(caractere, SnailFile, HOKI);
 		if ((caractere >= 48 && caractere <= 57) || (caractere >= 97 && caractere <= 122) || (caractere >= 65 && caractere <= 90) || (caractere == '_') || (caractere == '.'))
 			manyC[j++] = caractere;
 		else if ((caractere == ' ') || (caractere == '\n') || (caractere == ',') && (j != 0))
 		{
 			manyC[j] = '\0';
 			string TOK(manyC);
-			token.push_back(TOK);
+			HOKI.push_back(TOK);
 			j = 0;
 		}
 	}
-
-	ShowMe(token);
+	if (ShowONOFF){
+	ShowMe(HOKI);
+	}
 	
 }
-vector<string> Token::getVector() {
-	return token;
+vector<string> Token::getVector(vector<string>& HOKI) {
+	return HOKI;
 }
-char Token::checkCommenaireEtEnd(char A, FILE*& SnailFile)
+char Token::checkCommenaireEtEnd(char A, FILE*& SnailFile, vector<string>& HOKI)
 {
 	if (A == '%')
 	{
@@ -47,7 +49,7 @@ char Token::checkCommenaireEtEnd(char A, FILE*& SnailFile)
 				manyC[j++] = A;
 				manyC[j] = '\0';
 				string TOK(manyC);
-				token.push_back(TOK);
+				HOKI.push_back(TOK);
 				j = 0;
 				while (A != '\n')
 				{
@@ -57,14 +59,14 @@ char Token::checkCommenaireEtEnd(char A, FILE*& SnailFile)
 				}
 				manyC[j] = '\0';
 				string TOK1(manyC);
-				token.push_back(TOK1);
+				HOKI.push_back(TOK1);
 				j = 0;
 			}
 			else
 			{
 				manyC[j] = '\0';
 				string TOK(manyC);
-				token.push_back(TOK);
+				HOKI.push_back(TOK);
 				j = 0;
 			}
 		}
@@ -72,7 +74,7 @@ char Token::checkCommenaireEtEnd(char A, FILE*& SnailFile)
 	else
 		return A;
 }
-char Token::checkprintf(char A, FILE*& SnailFile)
+char Token::checkprintf(char A, FILE*& SnailFile, vector<string>& HOKI)
 {
 	if (A == '"') {
 		
@@ -86,18 +88,18 @@ char Token::checkprintf(char A, FILE*& SnailFile)
 		manyC[j++] = '"';
 		manyC[j] = '\0';
 		string TOK(manyC);
-		token.push_back(TOK);
+		HOKI.push_back(TOK);
 		j = 0;
 		return A = getc(SnailFile);
 	}
 	else
 		return A;
 }
-void Token::ShowMe(vector<string> Token)
+void Token::ShowMe(vector<string>& HOKI)
 {
 	int T = 0;
-	for (T = 0; T < Token.size(); T++)
+	for (T = 0; T < HOKI.size(); T++)
 	{
-		cout << "Token " << T << " : " << Token[T] << "\n";
+		cout << "Token " << T << " : " << HOKI[T] << "\n";
 	}
 }

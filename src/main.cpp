@@ -1,3 +1,11 @@
+/**
+	Salah Eddine Bentayeb
+	GitHub.com/HalasProject
+	FB | TWI | IG | @HalasDior
+	Snail Compiler
+	@version 1.0
+*/
+
 #include "Lexical.h"
 #include "Token.h"
 #include "Syntaxique.h"
@@ -17,7 +25,7 @@ int main()
 		printf("          [*]----------------------------------------[*]\n");
 	}
 	else {
-		{printf("         [*]----------------------------------------[*]\n");
+	   {printf("          [*]----------------------------------------[*]\n");
 		printf("          [|]    Fichier Snail est Bien charger !    [|]\n");
 		printf("          [|]----------------------------------------[|]\n");
 		printf("          [|]        (1) Analyse Lexical             [|]\n");
@@ -37,15 +45,14 @@ int main()
 			break;
 		}
 		case 2:{
-			Token tk(SnailFile);
-			tk.getVector();
+			Token tk(SnailFile,token,false);
 			Syntaxique Syn(token);
 			break; }
 		case 3: {
 			Semantique Sem(SnailFile);
 			break; }
 		case 4:
-			Token tok(SnailFile);
+			Token tok(SnailFile,token,true);
 			break;
 		}
 		fclose(SnailFile);

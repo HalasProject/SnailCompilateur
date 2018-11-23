@@ -14,11 +14,11 @@
 
 class Token{
 public:
-Token(FILE *);
-vector<string> getVector();
-void ShowMe(vector<string> Token);
-char checkCommenaireEtEnd(char, FILE*& SnailFile);
-char checkprintf(char, FILE*& SnailFile);
+Token(FILE *, vector<string>& HOKI,bool);
+vector<string> getVector(vector<string>& HOKI);
+void ShowMe(vector<string>& HOKI);
+char checkCommenaireEtEnd(char, FILE*& SnailFile, vector<string>& HOKI);
+char checkprintf(char, FILE*& SnailFile, vector<string>& HOKI);
 protected:
 private:
 

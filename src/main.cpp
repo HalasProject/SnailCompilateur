@@ -17,13 +17,13 @@ int main()
 		printf("          [*]----------------------------------------[*]\n");
 	}
 	else {
-		{printf("          [*]----------------------------------------[*]\n");
+		{printf("         [*]----------------------------------------[*]\n");
 		printf("          [|]    Fichier Snail est Bien charger !    [|]\n");
 		printf("          [|]----------------------------------------[|]\n");
 		printf("          [|]        (1) Analyse Lexical             [|]\n");
 		printf("          [|]        (2) Analyse Syntaxique          [|]\n");
 		printf("          [|]        (3) Analyse Semantique          [|]\n");
-		printf("          [|]        (4) Show All Tocken             [|]\n");
+		printf("          [|]        (4) Show All Tokens             [|]\n");
 		printf("          [*]----------------------------------------[*]\n");
 		printf("\n\n"); } //Command Printf
 		
@@ -36,8 +36,11 @@ int main()
 			Lexical Lex(SnailFile);
 			break;
 		}
-		case 2:
-			break;
+		case 2:{
+			Token tk(SnailFile);
+			tk.getVector();
+			Syntaxique Syn(token);
+			break; }
 		case 3: {
 			Semantique Sem(SnailFile);
 			break; }

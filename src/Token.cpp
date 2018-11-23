@@ -23,6 +23,10 @@ Token::Token(FILE * SnailFile)
 	}
 
 	ShowMe(token);
+	
+}
+vector<string> Token::getVector() {
+	return token;
 }
 char Token::checkCommenaireEtEnd(char A, FILE*& SnailFile)
 {

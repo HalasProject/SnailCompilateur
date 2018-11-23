@@ -1,6 +1,6 @@
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/src/description.png)
 
-Pour rouvrir ce projet de preferance avoir Visual Studio , accédez à Fichier > Ouvrir > Projet et sélectionnez le fichier .sln.
+To open this project, preferably have Visual Studio, go to File> Open> Project and select the .sln file.
 
 Type | Description | Regex 
 -----| ------------| ---------

@@ -1,7 +1,7 @@
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/src/description.png)
 
 <p align="center">
- • <a href="/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square"></a>
+ • <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square"></a>
   <img src="http://hits.dwyl.io/Halasproject/SnailCompilateur.svg"/> •
 </p>
 

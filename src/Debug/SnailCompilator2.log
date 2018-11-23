@@ -1,4 +1,12 @@
-﻿  Token.cpp
-c:\users\bentayeb\documents\github\snailcompilateur\src\token.cpp(90): warning C4018: '<' : incompatibilité signed/unsigned
-c:\users\bentayeb\documents\github\snailcompilateur\src\token.cpp(64): warning C4715: 'Token::checkCommenaireEtEnd' : les chemins de contrôle ne retournent pas tous une valeur
+﻿  Lexical.cpp
+c:\users\bentayeb\documents\github\snailcompilateur\src\lexical.cpp(117): warning C4018: '<' : incompatibilité signed/unsigned
+  Semantique.cpp
+c:\users\bentayeb\documents\github\snailcompilateur\src\semantique.cpp(177): warning C4018: '<' : incompatibilité signed/unsigned
+  Syntaxique.cpp
+c:\users\bentayeb\documents\github\snailcompilateur\src\syntaxique.cpp(9): warning C4018: '<' : incompatibilité signed/unsigned
+  Token.cpp
+c:\users\bentayeb\documents\github\snailcompilateur\src\token.cpp(91): warning C4018: '<' : incompatibilité signed/unsigned
+  main.cpp
+  Génération de code en cours...
+c:\users\bentayeb\documents\github\snailcompilateur\src\token.cpp(66): warning C4715: 'Token::checkCommenaireEtEnd' : les chemins de contrôle ne retournent pas tous une valeur
   SnailCompilator2.vcxproj -> C:\Users\BENTAYEB\Documents\GitHub\SnailCompilateur\src\Debug\SnailCompilator2.exe

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnailCompilator2", "SnailCompilator2\SnailCompilator2.vcxproj", "{380EEA06-623F-4760-AAF2-4942D87E38DC}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnailCompilator2", "SnailCompilator2.vcxproj", "{380EEA06-623F-4760-AAF2-4942D87E38DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {72BE70BB-9915-4F62-BF7F-C9A98C04AA06}
+		SolutionGuid = {4CDA5DD8-C762-4E91-B278-6816BEF0A53E}
 	EndGlobalSection
 EndGlobal

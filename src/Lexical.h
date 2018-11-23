@@ -1,3 +1,11 @@
+/**
+	Salah Eddine Bentayeb
+	GitHub.com/HalasProject
+	FB | TWI | IG | @HalasDior
+	Snail Compiler
+	@version 1.0
+*/
+
 #ifndef LEXICAL_H
 #define LEXICAL_H
 #include "pch.h"

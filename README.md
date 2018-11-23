@@ -1,5 +1,5 @@
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/src/description.png)
-
+[![HitCount](http://hits.dwyl.io/Halasproject/SnailCompilateur.svg)](http://hits.dwyl.io/Halasproject/SnailCompilateur)
 To open this project, preferably have Visual Studio, go to File> Open> Project and select the .sln file.
 
 Type | Description | Regex 

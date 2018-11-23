@@ -1,21 +1,16 @@
-// Conseils pour bien démarrer : 
-//   1. Utilisez la fenêtre Explorateur de solutions pour ajouter des fichiers et les gérer.
-//   2. Utilisez la fenêtre Team Explorer pour vous connecter au contrôle de code source.
-//   3. Utilisez la fenêtre Sortie pour voir la sortie de la génération et d'autres messages.
-//   4. Utilisez la fenêtre Liste d'erreurs pour voir les erreurs.
-//   5. Accédez à Projet > Ajouter un nouvel élément pour créer des fichiers de code, ou à Projet > Ajouter un élément existant pour ajouter des fichiers de code existants au projet.
-//   6. 
-
 #ifndef PCH_H
 #define PCH_H
 
 // TODO: Ajoutez les en-têtes à précompiler ici
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <string>
+
+// TODO: Ajoutez les variable global ici
 using namespace std;
 static char operation[] = { "!&*+-/<>=" };
 static char instruction[][10] = { "Else","Finish","from" };
@@ -25,4 +20,5 @@ static char caractere;
 static char manyC[100];
 static int j = 0;
 static vector<string> token;
+
 #endif //PCH_H

@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="LICENSE.md"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square"></a>
-  <a src="http://hits.dwyl.io/Halasproject/SnailCompilateur" src="http://hits.dwyl.io/Halasproject/SnailCompilateur.svg"></a>   
+  <img src="http://hits.dwyl.io/Halasproject/SnailCompilateur.svg"/>
 </p>
 
 

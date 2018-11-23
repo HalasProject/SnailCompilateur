@@ -1,5 +1,12 @@
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/src/description.png)
-[![HitCount](http://hits.dwyl.io/Halasproject/SnailCompilateur.svg)](http://hits.dwyl.io/Halasproject/SnailCompilateur)
+
+<p align="center">
+  <a href="LICENSE.md"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square"></a>
+  <a src="http://hits.dwyl.io/Halasproject/SnailCompilateur" src="http://hits.dwyl.io/Halasproject/SnailCompilateur.svg"></a>   
+</p>
+
+
+
 To open this project, preferably have Visual Studio, go to File> Open> Project and select the .sln file.
 
 Type | Description | Regex 

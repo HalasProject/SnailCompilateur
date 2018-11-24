@@ -11,8 +11,8 @@
 
 
 Syntaxique::Syntaxique(vector<string> &token){
-	int nbr_start = 0;
-	 int nbr_finish = 0;
+	int S = 0;
+	 int F = 0;
 	 cout << token.size();
 	for (i = 0; i < token.size(); i++) {
 		if (token[i] == "Snl_Start")
@@ -38,8 +38,8 @@ Syntaxique::Syntaxique(vector<string> &token){
 
 		if (token[i] == "Start")
 		{
-			nbr_start = nbr_start + 1;
-			nbr_finish = nbr_finish + 1;
+			S = S + 1;
+			F = F + 1;
 			if (token[i - 1] == "Else")
 			{
 				continue;
@@ -55,10 +55,10 @@ Syntaxique::Syntaxique(vector<string> &token){
 		if (token[i] == "Finish")
 		{
 			cout << "\n" + token[i];
-			nbr_finish = nbr_finish - 1;
-			if (nbr_start > 0)
+			F = F - 1;
+			if (S > 0)
 			{
-				nbr_start = nbr_start - 1;
+				S = S - 1;
 				continue;
 			}
 			else
@@ -69,7 +69,7 @@ Syntaxique::Syntaxique(vector<string> &token){
 
 		if (token[i] == "Snl_Close")
 		{
-			if (nbr_finish <= 0)
+			if (F <= 0)
 			{
 				cout << "\n" + token[i];
 				continue;

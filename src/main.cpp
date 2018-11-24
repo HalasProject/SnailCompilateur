@@ -11,21 +11,27 @@
 #include "Syntaxique.h"
 #include "Semantique.h"
 #include "pch.h"
-
+ 
 int choix;
 
 
 FILE* SnailFile = fopen("Test.snl", "r");
 int main()
 {
-
+	// 13 Violet
+	// 14 Jaune
+	// 11 Blue fushia
+	// 10 Vert
+	color = 10;
+	SetConsoleTextAttribute(hConsole, color);
 	if (!SnailFile) {
 		printf("          [*]----------------------------------------[*]\n");
 		printf("          [!]         Erreur du fichier Snail  !     [!]\n");
 		printf("          [*]----------------------------------------[*]\n");
 	}
 	else {
-		{printf("          [*]----------------------------------------[*]\n");
+		{
+		printf("          [*]----------------------------------------[*]\n");
 		printf("          [|]    Fichier Snail est Bien charger !    [|]\n");
 		printf("          [|]----------------------------------------[|]\n");
 		printf("          [|]        (1) Analyse Lexical             [|]\n");

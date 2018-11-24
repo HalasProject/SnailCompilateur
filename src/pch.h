@@ -10,7 +10,7 @@
 #define PCH_H
 
 // TODO: Ajoutez les en-têtes à précompiler ici
-
+#include <windows.h> 
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -27,8 +27,10 @@ static int i;
 static char caractere;
 static char manyC[100];
 static int j = 0;
+static int color;
 static vector<string> token;
 
+static HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 
 #endif //PCH_H

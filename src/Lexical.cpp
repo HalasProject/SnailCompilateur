@@ -13,7 +13,8 @@ bool DoF = true;
 
 Lexical::Lexical(FILE* SnailFile)
 {
-
+	color = 13;
+	SetConsoleTextAttribute(hConsole, color);
 	while ((caractere = getc(SnailFile)) != EOF) {
 		checkOperator(caractere);
 		checkCommenaireEtEnd(caractere, SnailFile);

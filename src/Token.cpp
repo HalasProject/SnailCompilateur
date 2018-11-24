@@ -12,6 +12,8 @@
 
 Token::Token(FILE * SnailFile, vector<string>& HOKI, bool ShowONOFF)
 {
+	color = 14;
+	SetConsoleTextAttribute(hConsole, color);
 	printf("[*]------------------------------------------------------[*]\n");
 	printf("[*]-------------------T---O---K---E---N------------------[*]\n");
 	printf("[*]------------------------------------------------------[*]\n");

@@ -11,6 +11,8 @@
 
 
 Syntaxique::Syntaxique(vector<string> &token) {
+	color = 11;
+	SetConsoleTextAttribute(hConsole, color);
 	int S = 0;
 	int F = 0;
 	int Error = 0;

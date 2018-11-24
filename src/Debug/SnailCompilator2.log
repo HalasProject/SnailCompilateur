@@ -1,3 +1,4 @@
-﻿  Syntaxique.cpp
-c:\users\bentayeb\documents\github\snailcompilateur\src\syntaxique.cpp(18): warning C4018: '<' : incompatibilité signed/unsigned
-  SnailCompilator2.vcxproj -> C:\Users\BENTAYEB\Documents\GitHub\SnailCompilateur\src\Debug\SnailCompilator2.exe
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: Le répertoire intermédiaire (Debug\) contient des fichiers partagés provenant d'un autre projet (SnailCompilator2.vcxproj). Cela peut entraîner un comportement de nettoyage et de régénération incorrect.
+  Lexical.cpp
+c:\users\bentayeb\documents\github\snailcompilateur\src\lexical.cpp(128): warning C4018: '<' : incompatibilité signed/unsigned
+  SnailCompilator2.vcxproj -> C:\Users\BENTAYEB\Documents\GitHub\SnailCompilateur\src\Debug\SnailCompilator.exe

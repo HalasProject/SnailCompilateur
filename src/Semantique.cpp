@@ -16,7 +16,8 @@ bool doit = true;
 Semantique::Semantique(FILE* SnailFile)
 {
 	while ((caractere = getc(SnailFile)) != EOF) {
-
+		color = 11;
+		SetConsoleTextAttribute(hConsole, color);
 		checkOperator(caractere);
 		checkCommenaireEtEnd(caractere, SnailFile);
 		checkprintf(caractere, SnailFile);

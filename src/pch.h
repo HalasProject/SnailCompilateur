@@ -21,7 +21,7 @@
 // TODO: Ajoutez les variable global ici
 using namespace std;
 static char operation[] = { "!&*+-/<>=" };
-static char instruction[][10] = { "Else","Finish","from" };
+static char instruction[][10] = { "Start","Else","Finish","from" };
 static int sizeInstruction = sizeof(instruction) / sizeof(instruction[0]);
 static int i;
 static char caractere;

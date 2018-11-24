@@ -13,6 +13,7 @@
 class Syntaxique {
 public:
 	Syntaxique(vector<string>&);
+	bool Operator(string);
 protected:
 private:
 };

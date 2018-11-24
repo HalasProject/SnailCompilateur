@@ -76,7 +76,7 @@ Syntaxique::Syntaxique(vector<string> &token) {
 		{
 			if (F <= 0)
 			{
-				cout << "\n" + token[i];
+				cout << token[i];
 				continue;
 			}
 			else
@@ -164,6 +164,7 @@ Syntaxique::Syntaxique(vector<string> &token) {
 			cout << token[i] + " ";
 			if (token[i + 1] == "%.")
 			{
+				Error++;
 				cout << "\n >[ERROR]  expected identifier after Snl_Int";
 			}
 			int L = 1;
@@ -176,85 +177,52 @@ Syntaxique::Syntaxique(vector<string> &token) {
 			continue;
 		}
 
-		/**
 		else if (token[i] == "Get")
 		{
-			cout << token[i] + " ";
-			cout << token[1] + " ";
-		else
-		{
-			console += "\n * Identificateur expected afer " + token[0];
-		}
-		if (token[2] == ":")
-		{
-			tmp += token[2] + " ";
-		}
-		else
-		{
-			console += "\n * ' : ' expected afer " + token[1];
-		}
-		if (Int(token[3]) || Float(token[3]))
-		{
-			tmp += token[3] + " ";
-		}
-		else
-		{
-			console += "\n * Valeur expected afer " + token[2];
-		}
-		if (token[token.length() - 1] == ";;")
-		{
-			tmp += token[4] + " ";
-		}
-		else
-		{
-			console += "\n * ' ;; ' expected at the en ";
-		}
-		}
-		/**
-		else if (token[0] == "Affect")
-		{
-			for (i = 0; i < token.length(); i++)
+			cout << "\n" << token[i] + " ";
+			cout << token[i + 1] + " ";
+			if (token[i + 2] != "from")
 			{
-				tmp += token[i] + " ";
-			}
-			console += "\n" + tmp;
-			if (Identificateur(token[1]))
-			{
-				tmp += token[1] + " ";
+				Error++;
+				cout << "\n>[ERROR] Expected from after identificateur. \n";
 			}
 			else
 			{
-				console += "\n * Identificateur expected afer " + token[0];
+				cout << token[i + 2] << " ";
 			}
-			if (token[2] == "to")
+			cout << token[i + 3];
+			if (token[i + 4] != "%.")
 			{
-				tmp += token[2] + " ";
+				Error++;
+				cout << "\n>[ERROR] Expected \"%.\" at the End of instruction. \n";
 			}
 			else
 			{
-				console += "\n * ' to ' expected afer " + token[1];
+				cout << token[i + 4];
 			}
-			if (Identificateur(token[3]))
-			{
-				tmp += token[3] + " ";
-			}
-			else
-			{
-				console += "\n * Identificateur expected afer " + token[2];
-			}
-			if (token[4] == ";;")
-			{
-				tmp += token[4] + " ";
-			}
-			else
-			{
-				console += "\n * ' ;; ' expected afer " + token[3];
-			}
+			continue;
 		}
-		**/
+
+		else if (token[i] == "Set")
+		{
+			cout << "\n" << token[i] + " ";
+			cout << token[i + 1] + " ";
+			cout << token[i + 2] << " ";
+			if (token[i + 3] != "%.")
+			{
+				Error++;
+				cout << "\n>[ERROR] Expected \"%.\" at the End of instruction. \n";
+			}
+			else
+			{
+				cout << token[i + 3];
+			}
+			continue;
+		}
+
 		else if (token[i] == "%..")
 		{
-		    cout << token[i] << " ";
+			cout << token[i] << " ";
 			cout << token[i + 1];
 			continue;
 		}

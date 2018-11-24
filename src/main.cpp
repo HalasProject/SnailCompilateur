@@ -25,7 +25,7 @@ int main()
 		printf("          [*]----------------------------------------[*]\n");
 	}
 	else {
-	   {printf("          [*]----------------------------------------[*]\n");
+		{printf("          [*]----------------------------------------[*]\n");
 		printf("          [|]    Fichier Snail est Bien charger !    [|]\n");
 		printf("          [|]----------------------------------------[|]\n");
 		printf("          [|]        (1) Analyse Lexical             [|]\n");
@@ -34,7 +34,7 @@ int main()
 		printf("          [|]        (4) Show All Tokens             [|]\n");
 		printf("          [*]----------------------------------------[*]\n");
 		printf("\n\n"); } //Command Printf
-		
+
 		printf("Snail>");
 		cin >> choix;
 		printf("\n\n");
@@ -44,17 +44,17 @@ int main()
 			Lexical Lex(SnailFile);
 			break;
 		}
-		case 2:{
-			Token tk(SnailFile,token,false);
+		case 2: {
+			Token tk(SnailFile, token, false);
 			Syntaxique Syn(token);
 			break; }
 		case 3: {
 			Semantique Sem(SnailFile);
 			break; }
 		case 4:
-			Token tok(SnailFile,token,true);
+			Token tok(SnailFile, token, true);
 			break;
 		}
 		fclose(SnailFile);
-		}
 	}
+}

@@ -71,19 +71,21 @@ void Lexical::checkOperator(char A)
 {
 	for (i = 0; i < sizeof(operation); i++) {
 		if (A == operation[i])
-		{printf("Operator   : %c \n",A);}
+		{
+			printf("Operator   : %c \n", A);
+		}
 	}
 }
-char Lexical::checkCommenaireEtEnd(char A,FILE*& SnailFile)
+char Lexical::checkCommenaireEtEnd(char A, FILE*& SnailFile)
 {
 	if (A == '%')
 		if ((A = getc(SnailFile)) == '.') {
 			if ((A = getc(SnailFile)) == '.') {
 
-				printf ("Commentaire: ");
+				printf("Commentaire: ");
 				while (A != '\n') {
 					A = getc(SnailFile);
-					printf ("%c", A);
+					printf("%c", A);
 				}
 			}
 			else
@@ -92,7 +94,7 @@ char Lexical::checkCommenaireEtEnd(char A,FILE*& SnailFile)
 				printf("-----------------------------------------------------------------------\n");
 			}
 		}
-		else 
+		else
 			if (DoF)
 			{
 				printf("%% :Debut De condition\n");
@@ -103,18 +105,18 @@ char Lexical::checkCommenaireEtEnd(char A,FILE*& SnailFile)
 				printf("%% :Fin de Condition\n");
 				DoF = true;
 			}
-	
+
 	return A;
 }
 void Lexical::check_key(char* manyC)
 {
-    int flag = 0;
+	int flag = 0;
 	for (i = 0; i < sizeInstruction; ++i)
 	{
 		/* linear search for the keyword */
 		if (strcmp(instruction[i], manyC) == 0)
 		{
-			printf ("Keyword    : %s\n", manyC);
+			printf("Keyword    : %s\n", manyC);
 			return;
 		}
 	}
@@ -133,12 +135,12 @@ void Lexical::check_key(char* manyC)
 		{
 			/* converting string into number */
 			int temp = atoi(manyC);
-			printf ("%d : Literal\n", temp);
+			printf("%d : Literal\n", temp);
 			return;
 		}
 		else
 		{
-			printf ("Identificateur : %s (invalid)\n", manyC);
+			printf("Identificateur : %s (invalid)\n", manyC);
 			return;
 		}
 	}
@@ -146,24 +148,24 @@ void Lexical::check_key(char* manyC)
 	/* if string starts with alphabet */
 	if (manyC[0] >= 65 && manyC[0] <= 90 || manyC[0] >= 97 && manyC[0] <= 122)
 	{
-		printf ("%s : Identificateur\n", manyC);
+		printf("%s : Identificateur\n", manyC);
 		return;
 	}
 }
 void Lexical::checkprintf(char A, FILE*& SnailFile)
 {
 	if (A == '"') {
-		printf ("Chaine     : (");
+		printf("Chaine     : (");
 		A = getc(SnailFile);
-		printf ("%c", A);
+		printf("%c", A);
 		while ((A != '"') && (A != '\n'))
 		{
 
 			A = getc(SnailFile);
 			if (A != '"') { printf("%c", A); }
-			
+
 		}
-		printf (")\n");
+		printf(")\n");
 	}
 	else
 		return;

@@ -23,7 +23,7 @@ Syntaxique::Syntaxique(vector<string> &token) {
 			continue;
 		}
 
-		if (token[i] == "Else")
+		else if (token[i] == "Else")
 		{
 			cout << "\n" + token[i];
 			if (token[i + 1] == "Start")
@@ -39,7 +39,7 @@ Syntaxique::Syntaxique(vector<string> &token) {
 			}
 		}
 
-		if (token[i] == "Start")
+		else if (token[i] == "Start")
 		{
 			S = S + 1;
 			F = F + 1;
@@ -56,7 +56,7 @@ Syntaxique::Syntaxique(vector<string> &token) {
 			}
 		}
 
-		if (token[i] == "Finish")
+		else if (token[i] == "Finish")
 		{
 			cout << "\n" + token[i] + "\n";
 			F = F - 1;
@@ -72,7 +72,7 @@ Syntaxique::Syntaxique(vector<string> &token) {
 			}
 		}
 
-		if (token[i] == "Snl_Close")
+		else if (token[i] == "Snl_Close")
 		{
 			if (F <= 0)
 			{
@@ -89,7 +89,7 @@ Syntaxique::Syntaxique(vector<string> &token) {
 
 		}
 
-		/** If % IDEN OPERATOR IDEN % */ if (token[i] == "If") {
+		/** If % IDEN OPERATOR IDEN % */ else if (token[i] == "If") {
 			cout << token[i] << " ";
 			if (token[i + 1] == "%")
 			{
@@ -213,10 +213,7 @@ Syntaxique::Syntaxique(vector<string> &token) {
 				Error++;
 				cout << "\n>[ERROR] Expected \"%.\" at the End of instruction. \n";
 			}
-			else
-			{
-				cout << token[i + 3];
-			}
+			else { cout << token[i + 3]; }
 			continue;
 		}
 
@@ -227,9 +224,7 @@ Syntaxique::Syntaxique(vector<string> &token) {
 			continue;
 		}
 
-
 	}
-
 
 	if (Error > 0)
 		cout << "\n\n[INFORMATION] Total Number Of Error = " << Error << endl;

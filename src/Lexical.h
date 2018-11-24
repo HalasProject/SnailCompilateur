@@ -10,13 +10,13 @@
 #define LEXICAL_H
 #include "pch.h"
 
-class Lexical{
+class Lexical {
 public:
-Lexical(FILE*);
-void checkOperator(char);
-char checkCommenaireEtEnd(char,FILE*& SnailFile);
-void check_key(char *);
-void checkprintf(char,FILE*& SnailFile);
+	Lexical(FILE*);
+	void checkOperator(char);
+	char checkCommenaireEtEnd(char, FILE*& SnailFile);
+	void check_key(char *);
+	void checkprintf(char, FILE*& SnailFile);
 protected:
 private:
 };

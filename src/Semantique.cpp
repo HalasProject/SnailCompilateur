@@ -161,9 +161,9 @@ char Semantique::checkCommenaireEtEnd(char A, FILE*& SnailFile)
 			}
 			else
 				printf(";\n");
-			
+
 		}
-		
+
 	return A;
 }
 void Semantique::check_key(char* manyC)

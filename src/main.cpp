@@ -14,8 +14,7 @@
  
 int choix;
 
-
-FILE* SnailFile = fopen("Test.snl", "r");
+FILE* SnailFile = fopen("C:/Users/BENTAYEB/Desktop/MyProject/Test.snl", "r");
 int main()
 {
 	// 13 Violet

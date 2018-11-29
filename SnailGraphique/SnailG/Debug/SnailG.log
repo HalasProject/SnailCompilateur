@@ -1,0 +1,46 @@
+﻿  Home.cpp
+c:\users\bentayeb\source\repos\snailg\snailg\tokenform.h(148): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\bentayeb\source\repos\snailg\snailg\tokenform.h(144): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'B' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'D' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'M' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'T' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(260): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(276): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+  Lexical.cpp
+c:\users\bentayeb\source\repos\snailg\snailg\tokenform.h(148): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\bentayeb\source\repos\snailg\snailg\tokenform.h(144): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'B' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'D' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'M' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'T' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(260): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(276): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\lexical.cpp(132): warning C4018: '<' : incompatibilité signed/unsigned
+  MyForm2.cpp
+c:\users\bentayeb\source\repos\snailg\snailg\tokenform.h(148): warning C4018: '<' : incompatibilité signed/unsigned
+c:\users\bentayeb\source\repos\snailg\snailg\tokenform.h(144): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'B' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'D' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'M' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4129: 'T' : caractère de séquence d'échappement non reconnu
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(239): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(260): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+c:\users\bentayeb\source\repos\snailg\snailg\myform2.h(276): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(208): note: voir la déclaration de 'fopen'
+  Génération de code en cours...
+  Home.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+  SnailG.vcxproj -> C:\Users\BENTAYEB\source\repos\SnailG\Debug\SnailG.exe

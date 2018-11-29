@@ -5,7 +5,7 @@
   <img src="http://hits.dwyl.io/Halasproject/SnailCompilateur.svg"/> •
 </p>
 
-![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/src/commnd.jpg)
+![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/SnailConsole/commnd.jpg)
 
 #### To open this project, preferably have [Visual Studio](https://visualstudio.microsoft.com/fr/vs/), go to File> Open> Project and select the .sln file.
 

@@ -14,12 +14,12 @@
 
 class Token {
 public:
-	Token(FILE *, bool);
+	Token(std::ifstream&);
 	std::vector<std::string> getVector();
-	void checkOperator(char, FILE*& SnailFile);
+	void checkOperator(char, std::ifstream& SnailFile);
+	char checkCommenaireEtEnd(char, std::ifstream& SnailFile);
+	char checkprintf(char, std::ifstream& SnailFile);
 	void ShowMe();
-	char checkCommenaireEtEnd(char, FILE*& SnailFile);
-	char checkprintf(char, FILE*& SnailFile);
 protected:
 private:
 

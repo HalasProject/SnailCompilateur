@@ -141,8 +141,9 @@ namespace SnailG {
 		debut();
 	}
 	private: void debut() {
-		FILE* SnailFile = fopen("C:/Users/BENTAYEB/Desktop/MyProject/Test.snl", "r");
-		Token tok(SnailFile,true);
+		Filo.close();
+		Filo.open("C:/Test.snl");
+		Token tok(Filo);
 		std::vector<std::string> lol = tok.getVector();
 		this->dataGridView1->Rows->Clear();
 		for (split = 0; split < lol.size(); split++)
@@ -158,6 +159,7 @@ namespace SnailG {
 			String^ str1 = gcnew String(Result.c_str());
 			this->dataGridView1->Rows->Add(str1,str2);
 		}
+		Filo.close();
 	}
 
 	};

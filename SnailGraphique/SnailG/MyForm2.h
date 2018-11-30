@@ -25,6 +25,9 @@ namespace SnailG {
 		{
 			InitializeComponent();
 			Debut(Path);
+			
+			//Filo.open(lol);
+
 		}
 
 	protected:
@@ -236,18 +239,20 @@ namespace SnailG {
 		this->label2->Text = "Analyse Lexical";
 		this->button1->Location = System::Drawing::Point(110, 342);
 		this->textBox1->Clear();
-		FILE* SnailFile = fopen("C:/Users/BENTAYEB/Desktop/MyProject/Test.snl", "r");
-		Lexical Lex(SnailFile);
+		Filo.open("C:/Test.snl");
+		Lexical Lex(Filo);
 		std::string lol = Lex.fin();
 		String^ str3 = gcnew String(lol.c_str());
 		this->textBox1->Text = str3;
 		this->label1->Text = "Analyse Lexical";
 		this->button1->Location = System::Drawing::Point(109, 345);
-		
+		Filo.close();
 	}
 
 	private:void Debut(String^ P) {
+		//String^ K2Z = gcnew String(P.c_str());
 		this->label1->Text = P;
+
 	//	std::string path = ToString(P);
 	}
 
@@ -257,8 +262,9 @@ namespace SnailG {
 		this->button2->Location = System::Drawing::Point(303, 271);
 		this->label2->Visible = true;
 		this->label2->Text = "Analyse Syntaxique";
-		FILE* SnailFile = fopen("C:/Users/BENTAYEB/Desktop/MyProject/Test.snl", "r");
-		Token tok(SnailFile,false);
+		
+		Filo.open("C:\\Test.snl");
+		Token tok(Filo);
 		TabDeToken.clear();
 		TabDeToken = tok.getVector();
 		Syntaxique syntx(TabDeToken);
@@ -266,6 +272,7 @@ namespace SnailG {
 		String^ str9 = gcnew String(rendu.c_str());
 		this->textBox1->Text = str9;
 		this->button2->Location = System::Drawing::Point(303, 274);
+		Filo.close();
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 	
@@ -273,13 +280,14 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 	this->label2->Text = "Analyse Semantique";
 	this->button3->Location = System::Drawing::Point(486, 189);
 	this->textBox1->Clear();
-	FILE* SnailFile = fopen("C:/Users/BENTAYEB/Desktop/MyProject/Test.snl", "r");
-	Semantique Sem(SnailFile);
+	Filo.open("C:/Test.snl");
+	Semantique Sem(Filo);
 	std::string lol = Sem.fin();
 	String^ str3 = gcnew String(lol.c_str());
 	this->textBox1->Text = str3;
 	this->label1->Text = "Analyse Lexical";
 	this->button3->Location = System::Drawing::Point(486, 192);
+	Filo.close();
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 	TokenForm^ Tok = gcnew TokenForm();

@@ -13,10 +13,10 @@ bool intilg = true;
 bool TurnMe = true;
 bool doit = true;
 
-Semantique::Semantique(FILE* SnailFile)
+Semantique::Semantique(std::ifstream& SnailFile)
 {
 	bezzaf.clear();
-	while ((caractere = getc(SnailFile)) != EOF) {
+	while ((caractere = SnailFile.get()) != EOF) {
 		
 		checkOperator(caractere);
 		checkCommenaireEtEnd(caractere, SnailFile);
@@ -32,7 +32,7 @@ Semantique::Semantique(FILE* SnailFile)
 			{
 
 				bezzaf += "if";
-				while ((caractere = getc(SnailFile)) != '\n') {
+				while ((caractere = SnailFile.get()) != '\n') {
 					if (caractere == '%' && doit == true) {
 						if (TurnMe)
 						{
@@ -85,21 +85,21 @@ Semantique::Semantique(FILE* SnailFile)
 			}
 			else if (strcmp("Get", manyC) == 0)
 			{
-				while ((caractere = getc(SnailFile)) != '\n') {
+				while ((caractere = SnailFile.get()) != '\n') {
 					if (caractere == '%')
 					{
-						caractere = getc(SnailFile); 
+						caractere = SnailFile.get(); 
 						bezzaf += ";\r\n";
 						intilg = true;
 						break;
 					}
 					if (caractere == 'f')
 					{
-						caractere = getc(SnailFile);
-						caractere = getc(SnailFile);
-						caractere = getc(SnailFile);
-						caractere = getc(SnailFile);
-						caractere = getc(SnailFile);
+						caractere = SnailFile.get();
+						caractere = SnailFile.get();
+						caractere = SnailFile.get();
+						caractere = SnailFile.get();
+						caractere = SnailFile.get();
 						bezzaf += "";
 					}
 					if ((caractere == ' ') && (intilg == true))
@@ -114,10 +114,10 @@ Semantique::Semantique(FILE* SnailFile)
 			else if (strcmp("Set", manyC) == 0)
 			{
 
-				while ((caractere = getc(SnailFile)) != '\n') {
+				while ((caractere = SnailFile.get()) != '\n') {
 					if (caractere == '%')
 					{
-						caractere = getc(SnailFile); bezzaf += ";\r\n";
+						caractere = SnailFile.get();  bezzaf += ";\r\n";
 						intilg = true;
 						break;
 					}
@@ -139,7 +139,6 @@ Semantique::Semantique(FILE* SnailFile)
 		}
 	}
 }
-
 void Semantique::checkOperator(char A)
 {
 	for (i = 0; i < sizeof(operation); i++) {
@@ -149,15 +148,15 @@ void Semantique::checkOperator(char A)
 		}
 	}
 }
-char Semantique::checkCommenaireEtEnd(char A, FILE*& SnailFile)
+char Semantique::checkCommenaireEtEnd(char A, std::ifstream& SnailFile)
 {
 	if (A == '%')
-		if ((A = getc(SnailFile)) == '.') {
-			if ((A = getc(SnailFile)) == '.') {
+		if ((A = SnailFile.get()) == '.') {
+			if ((A = SnailFile.get()) == '.') {
 
 				bezzaf += "//";
 				while (A != '\n') {
-					A = getc(SnailFile);
+					A = SnailFile.get();
 					bezzaf += A;
 				}
 			}
@@ -212,16 +211,16 @@ void Semantique::check_key(char* manyC)
 		return;
 	}
 }
-void Semantique::checkprintf(char A, FILE*& SnailFile)
+void Semantique::checkprintf(char A, std::ifstream& SnailFile)
 {
 	if (A == '"') {
 		bezzaf += "\"";
-		A = getc(SnailFile);
+		A = SnailFile.get();
 		bezzaf += A;
 		while ((A != '"') && (A != '\n'))
 		{
 
-			A = getc(SnailFile);
+			A = SnailFile.get();
 			if (A != '"') { bezzaf += A; }
 
 		}

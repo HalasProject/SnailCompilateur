@@ -11,62 +11,63 @@
 #include "MyForm2.h"
 bool DoF = true;
 
-Lexical::Lexical(FILE* SnailFile) 
+Lexical::Lexical(std::ifstream& SnailFile) 
 {
 	bezzaf.clear();
-	while ((caractere = getc(SnailFile)) != EOF) {
-		checkOperator(caractere);
-		checkCommenaireEtEnd(caractere, SnailFile);
-		checkprintf(caractere, SnailFile);
+		while (SnailFile.get(caractere)) {
+			checkOperator(caractere);
+			checkCommenaireEtEnd(caractere, SnailFile);
+			checkprintf(caractere, SnailFile);
 
-		if ((caractere >= 48 && caractere <= 57) || (caractere >= 97 && caractere <= 122) || (caractere >= 65 && caractere <= 90) || (caractere == '_') || (caractere == '.'))
-			manyC[j++] = caractere;
-		else if ((caractere == ' ') || (caractere == '\n') || (caractere == ',') && (j != 0))
-		{
-			manyC[j] = '\0';
-			std::string TOK(manyC);
-			token.push_back(TOK);
-			j = 0;
-			if (strcmp("If", manyC) == 0)
+			if ((caractere >= 48 && caractere <= 57) || (caractere >= 97 && caractere <= 122) || (caractere >= 65 && caractere <= 90) || (caractere == '_') || (caractere == '.'))
+				manyC[j++] = caractere;
+			else if ((caractere == ' ') || (caractere == '\n') || (caractere == ',') && (j != 0))
 			{
-				bezzaf += "If : Condition\r\n";
-			}
-			else if (strcmp("Snl_Start", manyC) == 0)
-			{
-				bezzaf += "Snl_Start : Mot reserve debut de programme \r\n";
-			}
-			else if (strcmp("Snl_Put", manyC) == 0)
-			{
-				bezzaf += "Snl_Put : Mot reserve pour affichage \r\n";
-			}
-			else if (strcmp("Snl_Close", manyC) == 0)
-			{
-				bezzaf += "Snl_Close : Mot reserve fin de programme\r\n";
-			}
-			else if (strcmp("Snl_Int", manyC) == 0)
-			{
-				bezzaf += "Snl_Int   : Mot reserve declaration d'un entier\r\n";
-			}
-			else if (strcmp("Snl_Real", manyC) == 0)
-			{
-				bezzaf += "Snl_Real : Mot reserve declaration d'un reel\r\n";
-			}
-			else if (strcmp("Get", manyC) == 0)
-			{
-				bezzaf += "Get : Mot reserve pour affectation d'une valeur \r\n";
-			}
-			else if (strcmp("Set", manyC) == 0)
-			{
-				bezzaf += "Set : Mot reserve pour affectation d'une valeur \r\n";
-			}
-			else {
-				check_key(manyC);
+				manyC[j] = '\0';
+				std::string TOK(manyC);
+				token.push_back(TOK);
+				j = 0;
+				if (strcmp("If", manyC) == 0)
+				{
+					bezzaf += "If : Condition\r\n";
+				}
+				else if (strcmp("Snl_Start", manyC) == 0)
+				{
+					bezzaf += "Snl_Start : Mot reserve debut de programme \r\n";
+				}
+				else if (strcmp("Snl_Put", manyC) == 0)
+				{
+					bezzaf += "Snl_Put : Mot reserve pour affichage \r\n";
+				}
+				else if (strcmp("Snl_Close", manyC) == 0)
+				{
+					bezzaf += "Snl_Close : Mot reserve fin de programme\r\n";
+				}
+				else if (strcmp("Snl_Int", manyC) == 0)
+				{
+					bezzaf += "Snl_Int   : Mot reserve declaration d'un entier\r\n";
+				}
+				else if (strcmp("Snl_Real", manyC) == 0)
+				{
+					bezzaf += "Snl_Real : Mot reserve declaration d'un reel\r\n";
+				}
+				else if (strcmp("Get", manyC) == 0)
+				{
+					bezzaf += "Get : Mot reserve pour affectation d'une valeur \r\n";
+				}
+				else if (strcmp("Set", manyC) == 0)
+				{
+					bezzaf += "Set : Mot reserve pour affectation d'une valeur \r\n";
+				}
+				else {
+					check_key(manyC);
+				}
+
 			}
 
 		}
-		
 	}
-}
+
 void Lexical::checkOperator(char A)
 {
 	
@@ -79,15 +80,15 @@ void Lexical::checkOperator(char A)
 		}
 	}
 }
-char Lexical::checkCommenaireEtEnd(char A, FILE*& SnailFile)
+char Lexical::checkCommenaireEtEnd(char A, std::ifstream& SnailFile)
 {
 	if (A == '%')
-		if ((A = getc(SnailFile)) == '.') {
-			if ((A = getc(SnailFile)) == '.') {
+		if ((A = SnailFile.get()) == '.') {
+			if ((A = SnailFile.get()) == '.') {
 
 				bezzaf += "Commentaire: ";
 				while (A != '\n') {
-					A = getc(SnailFile);
+					A = SnailFile.get();
 					bezzaf += A;
 				}
 				bezzaf += "\r\n";
@@ -157,16 +158,16 @@ void Lexical::check_key(char* manyC)
 		return;
 	}
 }
-void Lexical::checkprintf(char A, FILE*& SnailFile)
+void Lexical::checkprintf(char A, std::ifstream& SnailFile)
 {
 	if (A == '"') {
 		printf("Chaine     : (");
-		A = getc(SnailFile);
+		A = SnailFile.get();
 		bezzaf += A;
 		while ((A != '"') && (A != '\n'))
 		{
 
-			A = getc(SnailFile);
+			A = SnailFile.get();
 			if (A != '"') { bezzaf += A; }
 
 		}
@@ -175,7 +176,6 @@ void Lexical::checkprintf(char A, FILE*& SnailFile)
 	else
 		return;
 }
-
 std::string Lexical::fin() {
 	return bezzaf;
 }

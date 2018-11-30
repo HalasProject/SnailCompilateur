@@ -11,12 +11,14 @@
 
 // TODO: Ajoutez les en-têtes à précompiler ici
 #include <stdio.h>
+#include <conio.h>
 #include <stdlib.h>
-#include <iostream>
-#include <fstream>
+#include <iostream> // std::cout
 #include <filesystem>
 #include <vector>
 #include <string>
+#include <iomanip>
+#include <fstream>  //std::ifstream
 #include <sstream> 
 
 // TODO: Ajoutez les variable global ici
@@ -33,4 +35,5 @@ static std::vector<std::string> token;
 static int split;
 static std::string bezzaf;
 static std::vector<std::string> TabDeToken;
+static std::ifstream Filo;
 #endif //PCH_H

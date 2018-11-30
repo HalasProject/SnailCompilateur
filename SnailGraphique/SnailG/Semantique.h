@@ -11,11 +11,11 @@
 #include "pch.h"
 class Semantique {
 public:
-	Semantique(FILE*);
+	Semantique(std::ifstream&);
 	void checkOperator(char);
-	char checkCommenaireEtEnd(char, FILE*& SnailFile);
+	char checkCommenaireEtEnd(char, std::ifstream& SnailFile);
 	void check_key(char *);
-	void checkprintf(char, FILE*& SnailFile);
+	void checkprintf(char, std::ifstream& SnailFile);
 	static std::string fin();
 protected:
 private:

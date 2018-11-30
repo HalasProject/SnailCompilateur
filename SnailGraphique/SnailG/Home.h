@@ -78,7 +78,7 @@ namespace SnailG {
 			this->openFileDialog1->FileName = L"SnailFile";
 			this->openFileDialog1->Filter = L"Snail files (*.snl)|*.snl";
 			this->openFileDialog1->FilterIndex = 2;
-			this->openFileDialog1->InitialDirectory = L"c://";
+			this->openFileDialog1->InitialDirectory = L"c:/";
 			// 
 			// Home
 			// 
@@ -91,6 +91,7 @@ namespace SnailG {
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->Name = L"Home";
+			this->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Home";
 			this->Load += gcnew System::EventHandler(this, &Home::Home_Load);
@@ -108,13 +109,11 @@ namespace SnailG {
 		{
 			if ((myStream = openFileDialog1->OpenFile()) != nullptr)
 			{
-				String^ Path;
-				// Insert code to read the stream here.
-				
+			    String^ Path;
 				Path = openFileDialog1->FileName;
 				MyForm2^ f2 = gcnew MyForm2(Path);
 				f2->Show();
-				myStream->Close();
+				myStream->Close(); 
 				this->Hide();
 			}
 		}

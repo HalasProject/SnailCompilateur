@@ -11,7 +11,7 @@
 
 
 Syntaxique::Syntaxique(std::vector<std::string> &token) {
-	
+	bezzaf.clear();
 	int S = 0;
 	int F = 0;
 	int Error = 0;

@@ -162,6 +162,7 @@
     <ClInclude Include="MyForm2.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Semantique.h" />
     <ClInclude Include="Syntaxique.h" />
     <ClInclude Include="Token.h" />
@@ -179,6 +180,12 @@
     <EmbeddedResource Include="TokenForm.resx">
       <DependentUpon>TokenForm.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SnailG.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

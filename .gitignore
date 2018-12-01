@@ -81,3 +81,7 @@ SnailGraphique/x64/Release/SnailG.exe.metagen
 SnailGraphique/x64/Release/SnailG.pdb
 SnailGraphique/.vs/SnailG/v15/ipch/AutoPCH/20baadd2221509c3/TOKENFORM.ipch
 SnailGraphique/.vs/SnailG/v15/ipch/AutoPCH/f79a95d0b4bc2948/TOKENFORM.ipch
+SnailGraphique/SnailG/x64/Release/SnailG.res
+SnailGraphique/SnailG/x64/Release/SnailG.tlog/rc.command.1.tlog
+SnailGraphique/SnailG/x64/Release/SnailG.tlog/rc.read.1.tlog
+SnailGraphique/SnailG/x64/Release/SnailG.tlog/rc.write.1.tlog

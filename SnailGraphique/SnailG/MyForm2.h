@@ -29,7 +29,7 @@ namespace SnailG {
 	public ref class MyForm2 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm2(String^ Path,std::string PathString)
+		MyForm2(String^ Path, std::string PathString)
 		{
 			InitializeComponent();
 			Debut(Path);
@@ -277,12 +277,12 @@ namespace SnailG {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		
-	    this->label2->Visible = true;
+
+		this->label2->Visible = true;
 		this->label2->Text = "Analyse Lexical";
 		this->button1->Location = System::Drawing::Point(143, 300);
 		this->textBox1->Clear();
-		
+
 		Filo.open(PathGeneral);
 		Lexical Lex(Filo);
 		std::string lol = Lex.fin();
@@ -293,19 +293,19 @@ namespace SnailG {
 	}
 
 	private:void Debut(String^ P) {
-		
+
 		this->label1->Text = P;
 
-	//	std::string path = ToString(P);
+		//	std::string path = ToString(P);
 	}
 
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-		
+
 		this->textBox1->Clear();
 		this->button2->Location = System::Drawing::Point(318, 309);
 		this->label2->Visible = true;
 		this->label2->Text = "Analyse Syntaxique";
-		
+
 		Filo.open(PathGeneral);
 		Token tok(Filo);
 		TabDeToken.clear();
@@ -314,51 +314,52 @@ namespace SnailG {
 		int nmbr = syntx.ErrorNombre();
 		std::string rendu = syntx.fin();
 		String^ str9 = gcnew String(rendu.c_str());
-		if (nmbr>0){ 
-			this->label3->ForeColor = System::Drawing::Color::Red ;
-			this->label3->Text = "Number of error = "+nmbr+" !"; }
+		if (nmbr > 0) {
+			this->label3->ForeColor = System::Drawing::Color::Red;
+			this->label3->Text = "Number of error = " + nmbr + " !";
+		}
 		else
 		{
 			this->label3->ForeColor = System::Drawing::Color::DarkSeaGreen;
 			this->label3->Text = "No Error in your file !";
 		}
-		
+
 		this->textBox1->Text = str9;
 		this->button2->Location = System::Drawing::Point(318, 304);
 		Filo.close();
 	}
-private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-	
-	this->label2->Visible = true;
-	this->label2->Text = "Analyse Semantique";
-	this->button3->Location = System::Drawing::Point(486, 308);
-	this->textBox1->Clear();
-	Filo.open(PathGeneral);
-	Semantique Sem(Filo);
-	std::string lol = Sem.fin();
-	String^ str3 = gcnew String(lol.c_str());
-	this->textBox1->Text = str3;
-	this->button3->Location = System::Drawing::Point(486, 303);
-	Filo.close();
-}
-private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-	TokenForm^ Tok = gcnew TokenForm();
-	Tok->Show();
-}
-private: System::Void MyForm2_Load(System::Object^  sender, System::EventArgs^  e) {
-	
-}
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 
-private: System::Void MyForm2_FormClosing_1(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
+		this->label2->Visible = true;
+		this->label2->Text = "Analyse Semantique";
+		this->button3->Location = System::Drawing::Point(486, 308);
+		this->textBox1->Clear();
+		Filo.open(PathGeneral);
+		Semantique Sem(Filo);
+		std::string lol = Sem.fin();
+		String^ str3 = gcnew String(lol.c_str());
+		this->textBox1->Text = str3;
+		this->button3->Location = System::Drawing::Point(486, 303);
+		Filo.close();
+	}
+	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+		TokenForm^ Tok = gcnew TokenForm();
+		Tok->Show();
+	}
+	private: System::Void MyForm2_Load(System::Object^  sender, System::EventArgs^  e) {
+
+	}
+
+	private: System::Void MyForm2_FormClosing_1(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) {
 		exit(0);
-	
-}
-private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
-	this->label2->Text = "";
-	this->textBox1->Clear();
-	this->label3->Text = "";
-}
-};
+
+	}
+	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->label2->Text = "";
+		this->textBox1->Clear();
+		this->label3->Text = "";
+	}
+	};
 
 
 }

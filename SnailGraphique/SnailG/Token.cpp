@@ -10,6 +10,7 @@
 #include "Token.h"
 
 static std::vector<std::string> HOKI;
+
 Token::Token(std::ifstream& SnailFile)
 {
 	HOKI.clear();
@@ -61,7 +62,7 @@ char Token::checkCommenaireEtEnd(char A, std::ifstream& SnailFile)
 				j = 0;
 				while (A != '\n')
 				{
-					 A = SnailFile.get();
+					A = SnailFile.get();
 					manyC[j++] = A;
 				}
 				manyC[j] = '\0';

@@ -1,11 +1,11 @@
-![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/SnailConsole/description.png)
-![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/SnailGraphique/snail.gif)
+![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/description.png)
+![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailGUI.gif)
 <p align="center">
  • <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square"></a>
   <img src="http://hits.dwyl.io/Halasproject/SnailCompilateur.svg"/> •
 </p>
 
-![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/SnailConsole/commnd.jpg)
+![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailCommand.jpg)
 
 #### To open this project, preferably have [Visual Studio](https://visualstudio.microsoft.com/fr/vs/), go to File> Open> Project and select the .sln file.
 

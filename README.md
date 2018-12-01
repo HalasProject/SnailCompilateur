@@ -1,13 +1,11 @@
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/description.png)
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailGUI.gif)
+![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailCommand.jpg)
 <p align="center">
  • <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square"></a>
   <img src="http://hits.dwyl.io/Halasproject/SnailCompilateur.svg"/> •
 </p>
-
-![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailCommand.jpg)
-
-#### To open this project, preferably have [Visual Studio](https://visualstudio.microsoft.com/fr/vs/), go to File> Open> Project and select the .sln file.
+#### To open this project, preferably have [Visual Studio 2017](https://visualstudio.microsoft.com/fr/vs/), go to File> Open> Project and select the .sln file.
 
 Type | Description | Regex 
 -----| ------------| ---------

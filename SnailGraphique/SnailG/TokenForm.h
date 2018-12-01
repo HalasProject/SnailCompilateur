@@ -150,7 +150,7 @@ namespace SnailG {
 	}
 	private: void debut() {
 		Filo.close();
-		Filo.open("C:/Test.snl");
+		Filo.open(PathGeneral);
 		Token tok(Filo);
 		std::vector<std::string> lol = tok.getVector();
 		this->dataGridView1->Rows->Clear();

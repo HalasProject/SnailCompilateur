@@ -1,6 +1,11 @@
 ﻿  Home.cpp
   Lexical.cpp
   MyForm2.cpp
+  Semantique.cpp
+  Syntaxique.cpp
+  Token.cpp
+  TokenForm.cpp
   Génération de code en cours...
+c:\users\bentayeb\documents\github\snailcompilateur\snailgraphique\snailg\token.cpp(92): warning C4715: 'Token::checkCommenaireEtEnd' : les chemins de contrôle ne retournent pas tous une valeur
   Home.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
   SnailG.vcxproj -> C:\Users\BENTAYEB\Documents\GitHub\SnailCompilateur\SnailGraphique\x64\Debug\SnailG.exe

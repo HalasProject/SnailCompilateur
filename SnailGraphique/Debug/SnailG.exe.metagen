@@ -21,7 +21,7 @@ Class SnailG.TokenForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class SnailG.MyForm2: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, std.basic_string<char\,std::char_traits<char>\,std::allocator<char> >*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Windows.Forms.TextBox textBox1 : Public
 Class SnailG.Home: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit

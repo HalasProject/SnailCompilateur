@@ -280,7 +280,7 @@ namespace SnailG {
 
 		this->label2->Visible = true;
 		this->label2->Text = "Analyse Lexical";
-		this->button1->Location = System::Drawing::Point(143, 300);
+		this->button1->Location = System::Drawing::Point(143, 310);
 		this->textBox1->Clear();
 
 		Filo.open(PathGeneral);
@@ -358,6 +358,7 @@ namespace SnailG {
 		this->label2->Text = "";
 		this->textBox1->Clear();
 		this->label3->Text = "";
+		Filo.close();
 	}
 	};
 

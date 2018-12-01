@@ -49,6 +49,7 @@ namespace SnailG {
 
 	private: System::Windows::Forms::OpenFileDialog^  openFileDialog1;
 
+
 	protected:
 
 	private:
@@ -71,15 +72,20 @@ namespace SnailG {
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::Transparent;
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->FlatAppearance->BorderSize = 0;
+			this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->ForeColor = System::Drawing::Color::Transparent;
 			this->button1->Location = System::Drawing::Point(566, 344);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(159, 57);
 			this->button1->TabIndex = 0;
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &Home::button1_Click);
 			// 
 			// openFileDialog1

@@ -1,7 +1,16 @@
+/**
+	Salah Eddine Bentayeb
+	GitHub.com/HalasProject
+	FB | TWI | IG | @HalasDior
+	Snail Compiler
+	@version 1.0
+*/
+
+
 #pragma once
 #include "MyForm2.h"
 #include "pch.h"
-
+#include <msclr\marshal_cppstd.h>
 namespace SnailG {
 	
 	using namespace System;
@@ -109,9 +118,13 @@ namespace SnailG {
 		{
 			if ((myStream = openFileDialog1->OpenFile()) != nullptr)
 			{
-			    String^ Path;
+				String^ Path;
 				Path = openFileDialog1->FileName;
-				MyForm2^ f2 = gcnew MyForm2(Path);
+				using namespace msclr::interop;
+				std::string PathString = marshal_as<std::string>(Path);
+				std::replace(PathString.begin(), PathString.end(), 92, 47);
+				Path = openFileDialog1->SafeFileName;
+				MyForm2^ f2 = gcnew MyForm2(Path, PathString);
 				f2->Show();
 				myStream->Close(); 
 				this->Hide();

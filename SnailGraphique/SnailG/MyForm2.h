@@ -1,3 +1,11 @@
+/**
+	Salah Eddine Bentayeb
+	GitHub.com/HalasProject
+	FB | TWI | IG | @HalasDior
+	Snail Compiler
+	@version 1.0
+*/
+
 #pragma once
 #include"Semantique.h"
 #include"Lexical.h"
@@ -21,11 +29,11 @@ namespace SnailG {
 	public ref class MyForm2 : public System::Windows::Forms::Form
 	{
 	public:
-		MyForm2(String^ Path)
+		MyForm2(String^ Path,std::string PathString)
 		{
 			InitializeComponent();
 			Debut(Path);
-			
+			PathGeneral = PathString;
 			//Filo.open(lol);
 
 		}
@@ -52,6 +60,8 @@ namespace SnailG {
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Button^  button4;
 	private: System::Windows::Forms::Button^  button5;
+	private: System::Windows::Forms::PictureBox^  pictureBox1;
+
 
 
 	private:
@@ -76,22 +86,24 @@ namespace SnailG {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::Transparent;
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
-			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->FlatAppearance->BorderSize = 0;
 			this->button1->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->button1->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button1->ForeColor = System::Drawing::Color::Transparent;
-			this->button1->Location = System::Drawing::Point(109, 344);
+			this->button1->Location = System::Drawing::Point(143, 305);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(162, 154);
+			this->button1->Size = System::Drawing::Size(135, 116);
 			this->button1->TabIndex = 0;
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm2::button1_Click);
@@ -115,16 +127,16 @@ namespace SnailG {
 			// 
 			this->button2->BackColor = System::Drawing::Color::Transparent;
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
-			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->FlatAppearance->BorderSize = 0;
 			this->button2->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->button2->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->button2->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button2->ForeColor = System::Drawing::Color::Transparent;
-			this->button2->Location = System::Drawing::Point(303, 274);
+			this->button2->Location = System::Drawing::Point(318, 304);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(162, 153);
+			this->button2->Size = System::Drawing::Size(135, 116);
 			this->button2->TabIndex = 2;
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm2::button2_Click);
@@ -133,37 +145,42 @@ namespace SnailG {
 			// 
 			this->button3->BackColor = System::Drawing::Color::Transparent;
 			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
-			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button3->FlatAppearance->BorderSize = 0;
 			this->button3->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
 			this->button3->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
 			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button3->ForeColor = System::Drawing::Color::Transparent;
-			this->button3->Location = System::Drawing::Point(486, 192);
+			this->button3->Location = System::Drawing::Point(486, 303);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(162, 153);
+			this->button3->Size = System::Drawing::Size(133, 116);
 			this->button3->TabIndex = 2;
 			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm2::button3_Click);
 			// 
 			// label1
 			// 
+			this->label1->AllowDrop = true;
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Console", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->BackColor = System::Drawing::Color::DeepSkyBlue;
+			this->label1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Lucida Console", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(12, 37);
+			this->label1->ForeColor = System::Drawing::Color::White;
+			this->label1->Location = System::Drawing::Point(377, 469);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(55, 13);
+			this->label1->Size = System::Drawing::Size(68, 16);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"label1";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
+			this->label2->BackColor = System::Drawing::Color::Transparent;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Adobe Gothic Std B", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(893, 14);
+			this->label2->Location = System::Drawing::Point(866, 14);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(218, 36);
 			this->label2->TabIndex = 4;
@@ -206,16 +223,26 @@ namespace SnailG {
 			this->button5->UseVisualStyleBackColor = false;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm2::button5_Click);
 			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(258, 458);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(295, 38);
+			this->pictureBox1->TabIndex = 7;
+			this->pictureBox1->TabStop = false;
+			// 
 			// MyForm2
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1278, 568);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->button5);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->label2);
-			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->textBox1);
@@ -228,6 +255,7 @@ namespace SnailG {
 			this->Text = L"Analyse";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MyForm2::MyForm2_FormClosing_1);
 			this->Load += gcnew System::EventHandler(this, &MyForm2::MyForm2_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -237,20 +265,20 @@ namespace SnailG {
 		
 	    this->label2->Visible = true;
 		this->label2->Text = "Analyse Lexical";
-		this->button1->Location = System::Drawing::Point(110, 342);
+		this->button1->Location = System::Drawing::Point(143, 300);
 		this->textBox1->Clear();
-		Filo.open("C:/Test.snl");
+		
+		Filo.open(PathGeneral);
 		Lexical Lex(Filo);
 		std::string lol = Lex.fin();
 		String^ str3 = gcnew String(lol.c_str());
 		this->textBox1->Text = str3;
-		this->label1->Text = "Analyse Lexical";
-		this->button1->Location = System::Drawing::Point(109, 345);
+		this->button1->Location = System::Drawing::Point(143, 305);
 		Filo.close();
 	}
 
 	private:void Debut(String^ P) {
-		//String^ K2Z = gcnew String(P.c_str());
+		
 		this->label1->Text = P;
 
 	//	std::string path = ToString(P);
@@ -259,11 +287,11 @@ namespace SnailG {
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 		
 		this->textBox1->Clear();
-		this->button2->Location = System::Drawing::Point(303, 271);
+		this->button2->Location = System::Drawing::Point(318, 309);
 		this->label2->Visible = true;
 		this->label2->Text = "Analyse Syntaxique";
 		
-		Filo.open("C:\\Test.snl");
+		Filo.open(PathGeneral);
 		Token tok(Filo);
 		TabDeToken.clear();
 		TabDeToken = tok.getVector();
@@ -271,22 +299,21 @@ namespace SnailG {
 		std::string rendu = syntx.fin();
 		String^ str9 = gcnew String(rendu.c_str());
 		this->textBox1->Text = str9;
-		this->button2->Location = System::Drawing::Point(303, 274);
+		this->button2->Location = System::Drawing::Point(318, 304);
 		Filo.close();
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 	
 	this->label2->Visible = true;
 	this->label2->Text = "Analyse Semantique";
-	this->button3->Location = System::Drawing::Point(486, 189);
+	this->button3->Location = System::Drawing::Point(486, 308);
 	this->textBox1->Clear();
-	Filo.open("C:/Test.snl");
+	Filo.open(PathGeneral);
 	Semantique Sem(Filo);
 	std::string lol = Sem.fin();
 	String^ str3 = gcnew String(lol.c_str());
 	this->textBox1->Text = str3;
-	this->label1->Text = "Analyse Lexical";
-	this->button3->Location = System::Drawing::Point(486, 192);
+	this->button3->Location = System::Drawing::Point(486, 303);
 	Filo.close();
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -302,6 +329,7 @@ private: System::Void MyForm2_FormClosing_1(System::Object^  sender, System::Win
 	
 }
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+	this->label2->Text = "";
 	this->textBox1->Clear();
 }
 };

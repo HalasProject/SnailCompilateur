@@ -36,4 +36,5 @@ static int split;
 static std::string bezzaf;
 static std::vector<std::string> TabDeToken;
 static std::ifstream Filo;
+static std::string PathGeneral;
 #endif //PCH_H

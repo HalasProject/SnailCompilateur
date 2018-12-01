@@ -14,8 +14,7 @@ Syntaxique::Syntaxique(std::vector<std::string> &token) {
 	bezzaf.clear();
 	int S = 0;
 	int F = 0;
-	int Error = 0;
-
+	Error = 0;
 	for (i = 0; i < token.size(); i++) {
 
 		if (token[i] == "Snl_Start")
@@ -245,4 +244,9 @@ bool Syntaxique::Operator(std::string OPER) {
 
 std::string Syntaxique::fin() {
 	return bezzaf;
+}
+
+int Syntaxique::ErrorNombre()
+{
+	return Error;
 }

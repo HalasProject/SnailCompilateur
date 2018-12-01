@@ -31,6 +31,7 @@ static char caractere;
 static char manyC[100];
 static int j = 0;
 static int color;
+static int Error;
 static std::vector<std::string> token;
 static int split;
 static std::string bezzaf;

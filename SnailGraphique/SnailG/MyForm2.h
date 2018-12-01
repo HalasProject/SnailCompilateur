@@ -61,6 +61,7 @@ namespace SnailG {
 	private: System::Windows::Forms::Button^  button4;
 	private: System::Windows::Forms::Button^  button5;
 	private: System::Windows::Forms::PictureBox^  pictureBox1;
+	private: System::Windows::Forms::Label^  label3;
 
 
 
@@ -87,6 +88,7 @@ namespace SnailG {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button5 = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->label3 = (gcnew System::Windows::Forms::Label());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -232,12 +234,25 @@ namespace SnailG {
 			this->pictureBox1->TabIndex = 7;
 			this->pictureBox1->TabStop = false;
 			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->BackColor = System::Drawing::Color::Transparent;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::DarkSeaGreen;
+			this->label3->Location = System::Drawing::Point(740, 466);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(0, 20);
+			this->label3->TabIndex = 8;
+			// 
 			// MyForm2
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1278, 568);
+			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->button5);
@@ -296,8 +311,18 @@ namespace SnailG {
 		TabDeToken.clear();
 		TabDeToken = tok.getVector();
 		Syntaxique syntx(TabDeToken);
+		int nmbr = syntx.ErrorNombre();
 		std::string rendu = syntx.fin();
 		String^ str9 = gcnew String(rendu.c_str());
+		if (nmbr>0){ 
+			this->label3->ForeColor = System::Drawing::Color::Red ;
+			this->label3->Text = "Number of error = "+nmbr+" !"; }
+		else
+		{
+			this->label3->ForeColor = System::Drawing::Color::DarkSeaGreen;
+			this->label3->Text = "No Error in your file !";
+		}
+		
 		this->textBox1->Text = str9;
 		this->button2->Location = System::Drawing::Point(318, 304);
 		Filo.close();
@@ -331,6 +356,7 @@ private: System::Void MyForm2_FormClosing_1(System::Object^  sender, System::Win
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
 	this->label2->Text = "";
 	this->textBox1->Clear();
+	this->label3->Text = "";
 }
 };
 

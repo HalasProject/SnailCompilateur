@@ -15,6 +15,7 @@ public:
 	Syntaxique(std::vector<std::string>&);
 	bool Operator(std::string);
 	std::string fin();
+	int ErrorNombre();
 protected:
 private:
 };

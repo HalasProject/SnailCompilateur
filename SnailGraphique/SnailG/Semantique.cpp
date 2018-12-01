@@ -15,7 +15,11 @@ bool doit = true;
 
 Semantique::Semantique(std::ifstream& SnailFile)
 {
+	
 	bezzaf.clear();
+	intilg = true;
+	TurnMe = true;
+	doit = true;
 	while ((caractere = SnailFile.get()) != EOF) {
 		
 		checkOperator(caractere);

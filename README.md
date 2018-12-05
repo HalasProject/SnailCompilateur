@@ -1,9 +1,10 @@
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/description.png)
+![Diagramme](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/Diagramme.png)
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailGUI.gif)
        
 
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailCommand.jpg)
-![Diagramme](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/Diagramme.png)
+
 <p align="center">
  • <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square"></a>
   <img src="http://hits.dwyl.io/Halasproject/SnailCompilateur.svg"/> •

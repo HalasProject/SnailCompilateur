@@ -1,13 +1,15 @@
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/description.png)
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailGUI.gif)
+       
+
+![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailCommand.jpg)
+![Diagramme](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/Diagramme.png.jpg)
 <p align="center">
  • <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square"></a>
   <img src="http://hits.dwyl.io/Halasproject/SnailCompilateur.svg"/> •
 </p>
 
-![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailCommand.jpg)
-
-#### To open this project, preferably have [Visual Studio](https://visualstudio.microsoft.com/fr/vs/), go to File> Open> Project and select the .sln file.
+#### To open this project, preferably have [Visual Studio 2017](https://visualstudio.microsoft.com/fr/vs/), go to File> Open> Project and select the .sln file.
 
 Type | Description | Regex 
 -----| ------------| ---------
@@ -22,6 +24,7 @@ Command | Description | Example
 Affectation of a number (Integer/Real) to a variable | Set <<identifier>> = <<value>> %. | `Set j 55 %.`
 Affectation of the value of a variable to another variable | Get <<identifier>> from <<identifier>> %. | `Get i from j %.`
 Condition | If % \<\<condition\>\> % \<\<action\>\> %. | `if % i<j % Set j 55 %.`
+
 
 Example of code : 
 

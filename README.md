@@ -1,6 +1,6 @@
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/description.png)
-![Diagramme](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/Diagramme.png)
-<!--![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailGUI.gif)-->
+<!--!![Diagramme](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/Diagramme.png)-->
+[alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailGUI.gif)
        
 
 ![alt text](https://raw.githubusercontent.com/HalasProject/SnailCompilateur/master/Image/SnailCommand.jpg)

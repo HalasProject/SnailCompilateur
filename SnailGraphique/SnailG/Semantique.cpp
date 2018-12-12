@@ -20,6 +20,7 @@ Semantique::Semantique(std::ifstream& SnailFile)
 	intilg = true;
 	TurnMe = true;
 	doit = true;
+	bezzaf += "#include<iostream>\r\n#include<string>\r\n\r\nusing namespace std;\r\n\r\n";
 	while ((caractere = SnailFile.get()) != EOF) {
 		
 		checkOperator(caractere);
@@ -55,6 +56,7 @@ Semantique::Semantique(std::ifstream& SnailFile)
 					bezzaf += caractere;
 				}
 			}
+			
 			else if (strcmp("Snl_Start", manyC) == 0)
 			{
 				bezzaf += "int main(){\r\n";
@@ -71,13 +73,21 @@ Semantique::Semantique(std::ifstream& SnailFile)
 			{
 				bezzaf += "int ";
 			}
+			else if (strcmp("SnlSt", manyC) == 0)
+			{
+				bezzaf += "string ";
+				while ((caractere = SnailFile.get()) != ' ') {
+					bezzaf += caractere;
+				}
+				bezzaf += " = ";
+			}
 			else if (strcmp("Snl_Real", manyC) == 0)
 			{
 				bezzaf += "float ";
 			}
 			else if (strcmp("Else", manyC) == 0)
 			{
-				bezzaf += "Else \r\n";
+				bezzaf += "else \r\n";
 			}
 			else if (strcmp("Start", manyC) == 0)
 			{
@@ -86,6 +96,11 @@ Semantique::Semantique(std::ifstream& SnailFile)
 			else if (strcmp("Finish", manyC) == 0)
 			{
 				bezzaf += "}\r\n";
+
+			}
+			else if (strcmp("do", manyC) == 0)
+			{
+				bezzaf += " ";
 			}
 			else if (strcmp("Get", manyC) == 0)
 			{
@@ -142,6 +157,7 @@ Semantique::Semantique(std::ifstream& SnailFile)
 
 		}
 	}
+
 }
 void Semantique::checkOperator(char A)
 {
@@ -163,6 +179,7 @@ char Semantique::checkCommenaireEtEnd(char A, std::ifstream& SnailFile)
 					A = SnailFile.get();
 					bezzaf += A;
 				}
+				bezzaf += "\r\n";
 			}
 			else
 				bezzaf += ";\r\n";

@@ -1,10 +1,7 @@
-﻿  Home.cpp
-c:\users\bentayeb\documents\github\snailcompilateur\snailgraphique\snailg\tokenform.h(157): warning C4018: '<' : incompatibilité signed/unsigned
-  Lexical.cpp
-c:\users\bentayeb\documents\github\snailcompilateur\snailgraphique\snailg\tokenform.h(157): warning C4018: '<' : incompatibilité signed/unsigned
-c:\users\bentayeb\documents\github\snailcompilateur\snailgraphique\snailg\lexical.cpp(133): warning C4018: '<' : incompatibilité signed/unsigned
-  MyForm2.cpp
-c:\users\bentayeb\documents\github\snailcompilateur\snailgraphique\snailg\tokenform.h(157): warning C4018: '<' : incompatibilité signed/unsigned
+﻿  Semantique.cpp
+c:\users\bentayeb\documents\github\snailcompilateur\snailgraphique\snailg\semantique.cpp(196): warning C4018: '<' : incompatibilité signed/unsigned
+  Syntaxique.cpp
+c:\users\bentayeb\documents\github\snailcompilateur\snailgraphique\snailg\syntaxique.cpp(18): warning C4018: '<' : incompatibilité signed/unsigned
   Génération de code en cours...
   Home.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
   SnailG.vcxproj -> C:\Users\BENTAYEB\Documents\GitHub\SnailCompilateur\SnailGraphique\Debug\SnailG.exe

@@ -25,10 +25,10 @@ Syntaxique::Syntaxique(std::vector<std::string> &token) {
 
 		else if (token[i] == "Else")
 		{
-			bezzaf += "\r\n" + token[i];
+			bezzaf += "\r\n"+token[i];
 			if (token[i + 1] == "Start")
 			{
-				bezzaf += "\r\n" + token[i + 1];
+				bezzaf += "\r\n" + token[i + 1] + "\r\n";
 				continue;
 			}
 			else
@@ -121,6 +121,16 @@ Syntaxique::Syntaxique(std::vector<std::string> &token) {
 				Error++;
 				bezzaf += "\r\n >[ERROR] '%' expected. \r\n  ";
 			}
+			if (token[i + 6] == "do")
+			{
+				bezzaf += " "+token[i + 6]+" ";
+			}
+			else
+			{
+				Error++;
+				bezzaf += "\r\n >[ERROR] 'do' expected. \r\n  ";
+			}
+
 			continue;
 		}
 
@@ -155,6 +165,42 @@ Syntaxique::Syntaxique(std::vector<std::string> &token) {
 			{
 				bezzaf += " %. \r\n";
 			}
+
+
+		}
+
+		else if (token[i] == "SnlSt")
+		{
+		bezzaf += token[i] + " ";
+		bezzaf += token[i+1] + " ";
+		std::string text = token[i + 2];
+		char lowal = text.at(0);
+		char tali = text.back();
+		if (lowal == 34) {
+			if (lowal == 34 && tali == 34)
+			{
+				bezzaf += token[i + 2];
+			}
+			else
+			{
+				Error++;
+				bezzaf += "\r\n>[ERROR] Expected \" \r\n ";
+			}
+		}
+		else
+		{
+			bezzaf += "Identificateur : " + token[i + 2];
+
+		}
+		if (token[i + 3] != "%.")
+		{
+			Error++;
+			bezzaf += " >[ERROR] Expected End of instruction \"%.\" \r\n";
+		}
+		else
+		{
+			bezzaf += " %. \r\n";
+		}
 
 
 		}
@@ -213,7 +259,7 @@ Syntaxique::Syntaxique(std::vector<std::string> &token) {
 				Error++;
 				bezzaf += "\r\n>[ERROR] Expected \"%.\" at the End of instruction. \r\n";
 			}
-			else { bezzaf += token[i + 3]; }
+			else { bezzaf += token[i + 3]+"\r\n"; }
 			continue;
 		}
 

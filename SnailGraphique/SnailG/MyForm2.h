@@ -64,6 +64,7 @@ namespace SnailG {
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::PictureBox^  pictureBox2;
 	private: System::Windows::Forms::PictureBox^  pictureBox3;
+	private: System::Windows::Forms::Button^  button6;
 
 
 
@@ -93,6 +94,7 @@ namespace SnailG {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->button6 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
@@ -272,12 +274,32 @@ namespace SnailG {
 			this->pictureBox3->TabIndex = 10;
 			this->pictureBox3->TabStop = false;
 			// 
+			// button6
+			// 
+			this->button6->BackColor = System::Drawing::Color::Transparent;
+			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
+			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->button6->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button6->FlatAppearance->BorderSize = 0;
+			this->button6->FlatAppearance->MouseDownBackColor = System::Drawing::Color::Transparent;
+			this->button6->FlatAppearance->MouseOverBackColor = System::Drawing::Color::Transparent;
+			this->button6->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button6->ForeColor = System::Drawing::Color::Transparent;
+			this->button6->Location = System::Drawing::Point(1139, 500);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(104, 36);
+			this->button6->TabIndex = 11;
+			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Visible = false;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm2::button6_Click);
+			// 
 			// MyForm2
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1278, 568);
+			this->Controls->Add(this->button6);
 			this->Controls->Add(this->pictureBox2);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label1);
@@ -307,7 +329,7 @@ namespace SnailG {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-
+		this->button6->Visible = false;
 		this->label2->Visible = true;
 		this->label2->Text = "Analyse Lexical";
 		this->button1->Location = System::Drawing::Point(143, 310);
@@ -330,7 +352,7 @@ namespace SnailG {
 	}
 
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-
+		this->button6->Visible = false;
 		this->textBox1->Clear();
 		this->button2->Location = System::Drawing::Point(318, 309);
 		this->label2->Visible = true;
@@ -371,6 +393,7 @@ namespace SnailG {
 		this->textBox1->Text = str3;
 		this->button3->Location = System::Drawing::Point(486, 303);
 		Filo.close();
+		this->button6->Visible = true;
 	}
 	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 		TokenForm^ Tok = gcnew TokenForm();
@@ -385,12 +408,19 @@ namespace SnailG {
 
 	}
 	private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+		this->button6->Visible = false;
 		this->label2->Text = "";
 		this->textBox1->Clear();
 		this->label3->Text = "";
 		Filo.close();
 	}
-	};
+	private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+		String^ output = this->textBox1->Text;
+		using namespace System::IO;
+		File::WriteAllText("SnailProgramme.cpp", output);
+		MessageBox::Show("File saved successfully (\"SnailProgramme.cpp\") !", "Snail Creator C++",MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+};
 
 
 }

@@ -18,8 +18,11 @@ Token::Token(std::ifstream& SnailFile)
 		checkOperator(caractere, SnailFile);
 		checkCommenaireEtEnd(caractere, SnailFile);
 		checkprintf(caractere, SnailFile);
-		if ((caractere >= 48 && caractere <= 57) || (caractere >= 97 && caractere <= 122) || (caractere >= 65 && caractere <= 90) || (caractere == '_') || (caractere == '.'))
+		
+         if ((caractere >= 48 && caractere <= 57) || (caractere >= 97 && caractere <= 122) || (caractere >= 65 && caractere <= 90) || (caractere == '_') || (caractere == '.'))
 			manyC[j++] = caractere;
+		
+
 		else if ((caractere == ' ') || (caractere == '\n') || (caractere == ',') && (j != 0))
 		{
 			manyC[j] = '\0';

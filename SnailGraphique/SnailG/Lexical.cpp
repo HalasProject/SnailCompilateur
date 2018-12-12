@@ -35,6 +35,10 @@ Lexical::Lexical(std::ifstream& SnailFile)
 				{
 					bezzaf += "Snl_Start : Mot reserve debut de programme \r\n";
 				}
+				else if (strcmp("SnlSt", manyC) == 0)
+				{
+					bezzaf += "SnlSt : Declaration d'une chaine de caractere \r\n";
+				}
 				else if (strcmp("Snl_Put", manyC) == 0)
 				{
 					bezzaf += "Snl_Put : Mot reserve pour affichage \r\n";
@@ -141,7 +145,7 @@ void Lexical::check_key(char* manyC)
 		{
 			/* converting string into number */
 			int temp = atoi(manyC);
-			bezzaf += ""+std::string(manyC)+" : Literal\r\n" ;
+			bezzaf += ""+std::string(manyC)+" : Chiffre\r\n" ;
 			return;
 		}
 		else
@@ -161,17 +165,21 @@ void Lexical::check_key(char* manyC)
 void Lexical::checkprintf(char A, std::ifstream& SnailFile)
 {
 	if (A == '"') {
-		printf("Chaine     : (");
+		bezzaf += "Chaine : ";
+		bezzaf += "(";
+		bezzaf += A;
 		A = SnailFile.get();
 		bezzaf += A;
-		while ((A != '"') && (A != '\n'))
-		{
+	
+			while ((A != '"') && (A != '%'))
+			{
 
-			A = SnailFile.get();
-			if (A != '"') { bezzaf += A; }
+				A = SnailFile.get();
+				bezzaf += A;
 
-		}
-		bezzaf += ")\r\n";
+			}
+			bezzaf += ")\r\n";
+		
 	}
 	else
 		return;

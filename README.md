@@ -31,9 +31,10 @@ Example of code :
 
 `Snl_Start`  
 `Snl_Int` i,j,Aft_5,f_f_5 %.  
+`SnlSt` test "chaine de caractere" %.  
 `Set i` 23 %.   
 `Snl_Real` Aft34_2 %.       
-If % i<j % `Set` Aft_5 10 %.      
+If % i < j % do `Set` Aft_5 10 %.      
 Else       
 Start            
 `Get` j from i %.    
